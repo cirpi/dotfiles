@@ -12,12 +12,12 @@ SETUVAR budspencer_sessions_active_pid:\x1d
 SETUVAR chain_links:chain\x2elinks\x2eroot\x1echain\x2elinks\x2ejobs\x1echain\x2elinks\x2epwd\x1echain\x2elinks\x2evcs_branch\x1echain\x2elinks\x2evcs_dirty\x1echain\x2elinks\x2evcs_stashed
 SETUVAR fish_color_autosuggestion:6272a4
 SETUVAR fish_color_cancel:ff5555\x1e\x2d\x2dreverse
-SETUVAR fish_color_command:5f87ff
+SETUVAR fish_color_command:green
 SETUVAR fish_color_comment:red
 SETUVAR fish_color_cwd:00875f
 SETUVAR fish_color_cwd_root:red
 SETUVAR fish_color_end:bcbcbc
-SETUVAR fish_color_error:red\x1e\x2d\x2dbold
+SETUVAR fish_color_error:red
 SETUVAR fish_color_escape:cyan
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:cyan
