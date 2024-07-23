@@ -5,4 +5,4 @@ alias cls "clear"
 alias new "tmux new-session -A -s"
 alias tls "tmux ls"
 alias G "Godoc"
-
+alias ff "fzf"
