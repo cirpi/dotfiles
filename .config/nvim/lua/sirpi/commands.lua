@@ -166,3 +166,9 @@ function Makefile()
         vim.cmd("make")
     end
 end
+
+function Commit()
+    commit_msg = vim.fn.inputdialog("Commit Message: ")
+    cmd = string.format('Git co -m %s', commit_msg)
+    vim.fn.execute(cmd)
+end

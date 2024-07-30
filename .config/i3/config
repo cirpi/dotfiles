@@ -239,7 +239,7 @@ bindsym $mod+Shift+w move workspace to output next
 bindsym $mod+Shift+c move container to output next
 bindsym $mod+Shift+o exec xrandr --output eDP-1 --auto
 bindsym $mod+Shift+f exec xrandr --output eDP-1 --off
-bindsym $mod+Control+l exec i3lock-fancy -p
+bindsym $mod+Control+l exec i3lock-fancy -g
 
 bindsym XF86MonBrightnessUp exec light -A 2
 bindsym XF86MonBrightnessDown exec light -U 2

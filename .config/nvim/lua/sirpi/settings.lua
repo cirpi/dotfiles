@@ -22,7 +22,7 @@ o.list = true
 --o.listchars = "space:\\u2022,tab:\\u21dc\\u2053\\u21dd,eol:\\u2937,"
 o.listchars = "space:\\u2022,tab:\\u21dc\\u2053\\u21dd,eol:\\u2937"
 
-cmd('colorscheme carbonfox')
+cmd('colorscheme everforest')
 
 
 

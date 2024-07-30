@@ -79,8 +79,7 @@ local themes = require "telescope.themes"
 -- Find the files in the current working directory
 vim.keymap.set('n', '<leader>ff', function()
     path = vim.fn.getcwd()
-    print(path)
-    builtin.find_files(themes.get_dropdown({ cwd = path }))
+    builtin.find_files(themes.get_dropdown({ cwd = path, no_ignore = true }))
 end)
 -- grep for the current file/buffer
 vim.keymap.set('n', '<leader>gr', function()
@@ -103,8 +102,6 @@ vim.keymap.set('n', '<leader>j', function()
     builtin.diagnostics(themes.get_dropdown({ bufnr = 0 }))
 end)
 
--- Git status (Fugitive plugin)
-map('n', '<leader>gs', ':G<CR>')
 
 ---map('n', '<C-f>', ':LspZeroFormat<CR>')
 
@@ -121,3 +118,7 @@ vim.api.nvim_create_user_command('Preview', ":lua ColorSchemePreview()<cr>", {})
 -- Live server keybindings
 vim.api.nvim_create_user_command('Ls', 'LiveServerToggle', {})
 vim.keymap.set('n', '<leader>k', ':lua vim.diagnostic.open_float()<CR>')
+
+
+
+map('n', '<leader>gs', ':G st<CR>')
