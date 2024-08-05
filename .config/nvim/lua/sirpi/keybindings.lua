@@ -122,3 +122,4 @@ vim.keymap.set('n', '<leader>k', ':lua vim.diagnostic.open_float()<CR>')
 
 
 map('n', '<leader>gs', ':G st<CR>')
+map('n', '<C-d>', 'x')
