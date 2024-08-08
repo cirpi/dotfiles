@@ -49,7 +49,7 @@ map('n', 'ge', ':lua HorizontalReduce()<CR>')
 -- make windows size equal
 map('n', '=', '<C-w>=')
 -- format the current buffer and save
-map('n', '<leader><leader>', ':lua FormatAndSave()<CR>')
+map('n', '<leader><leader>', ':silent write<CR>')
 
 
 
@@ -122,4 +122,4 @@ vim.keymap.set('n', '<leader>k', ':lua vim.diagnostic.open_float()<CR>')
 
 
 map('n', '<leader>gs', ':G st<CR>')
-map('n', '<C-d>', 'x')
+-- map('n', '<C-d>', 'x')

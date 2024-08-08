@@ -4,3 +4,8 @@ function Godoc
     set -l less $(string join " | " $cmd "less")
     eval $less
 end
+
+function fish_greeting
+    fortune | lolcat
+end
+

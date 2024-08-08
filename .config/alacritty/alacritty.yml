@@ -1,0 +1,20 @@
+font:
+  normal:
+    family: FantasqueSansM Nerd Font
+    style: Regular
+  size: 11.5
+  builtin_box_drawing: true
+
+shell:
+  program: /usr/bin/fish
+
+window:
+  padding: {x: 10, y: 10}
+  dynamic_padding: true
+  opacity: 0.7
+
+colors:
+  primary:
+    background: "#202C25"
+    foreground: "#B9BAAA"
+

@@ -22,7 +22,7 @@ function FormatAndSave()
     --     cmd = string.format('silent !goimports -w %s', GetCurrentFile())
     --     vim.api.nvim_command(cmd)
     -- end
-    vim.cmd("write")
+    vim.cmd("silent write")
 end
 
 function GetCurrentFile()
