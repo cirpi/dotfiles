@@ -1,9 +1,9 @@
 require('sirpi.keybindings')
 require('sirpi.plugins')
-require('sirpi.colors')
 require('sirpi.autocmds')
 require('sirpi.commands')
 require('sirpi.settings')
+require('sirpi.colors')
 
 require('Comment').setup()
 require('live-server').setup {

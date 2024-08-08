@@ -4,6 +4,7 @@ local g = vim.g
 
 
 o.number = true
+o.fillchars:append { eob = " " }
 o.relativenumber = true
 o.expandtab = true
 o.termguicolors = true
