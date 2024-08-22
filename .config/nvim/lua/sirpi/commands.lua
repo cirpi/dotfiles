@@ -2,6 +2,7 @@ function VerticalAdd()
     vim.api.nvim_command('vertical resize +5')
 end
 
+
 function VerticalReduce()
     vim.api.nvim_command('vertical resize -5')
 end

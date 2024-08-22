@@ -10,7 +10,6 @@ local function map(m, k, v)
     vim.api.nvim_set_keymap(m, k, v, { noremap = true, silent = true })
 end
 
-
 -- Window Navigation
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-l>", "<C-w>l")
@@ -29,7 +28,7 @@ map('n', 'mm', ':lua Makefile()<CR>')
 map('n', 'mr', ':make run<CR>')
 
 -- Toggle wrap
-map('n', '<C-w>', ':lua ToggleWrap()<CR>')
+map('n', '!', ':lua ToggleWrap()<CR>')
 
 -- close the current buffer
 map('n', '<C-q>', ':bd!<CR>')
@@ -103,6 +102,7 @@ vim.keymap.set('n', '<leader>j', function()
 end)
 
 
+
 ---map('n', '<C-f>', ':LspZeroFormat<CR>')
 
 -- Cursor movement (Ex: u20 move the cursor 20 lines up, d20 move 20 lines down, 20 move the 20th line)
@@ -117,7 +117,7 @@ vim.api.nvim_create_user_command('Preview', ":lua ColorSchemePreview()<cr>", {})
 
 -- Live server keybindings
 vim.api.nvim_create_user_command('Ls', 'LiveServerToggle', {})
-vim.keymap.set('n', '<leader>k', ':lua vim.diagnostic.open_float()<CR>')
+vim.keymap.set('n', '<leader>k', ':silent lua vim.diagnostic.open_float()<CR>')
 
 
 

@@ -1,8 +1,9 @@
 font:
   normal:
-    family: FantasqueSansM Nerd Font
+    family: CodeNewRoman Nerd Font
     style: Regular
-  size: 11.5
+  size: 14
+  # size: 10
   builtin_box_drawing: true
 
 shell:
@@ -11,10 +12,11 @@ shell:
 window:
   padding: {x: 10, y: 10}
   dynamic_padding: true
-  opacity: 0.7
 
 colors:
   primary:
     background: "#202C25"
     foreground: "#B9BAAA"
 
+selection:
+  save_to_clipboard: true
