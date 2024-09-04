@@ -87,7 +87,7 @@ return require('packer').startup(function(use)
     -- use 'neovim/nvim-lspconfig'
 
     -- Live server
-    use 'barrett-ruth/live-server.nvim'
+    use 'ngtuonghy/live-server-nvim'
 
     -- File tree
     use 'nvim-tree/nvim-tree.lua'

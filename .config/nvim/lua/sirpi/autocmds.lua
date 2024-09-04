@@ -1,4 +1,5 @@
 local go_augroup = vim.api.nvim_create_augroup("gocommands", { clear = true })
+local c_group = vim.api.nvim_create_augroup('ccommands', {clear=true})
 
 vim.api.nvim_create_autocmd({ "FileReadPre", "BufWritePre" }, {
     group = go_augroup,
@@ -11,6 +12,17 @@ vim.api.nvim_create_autocmd({ "FileReadPre", "BufWritePre" }, {
         end)
     end
 })
+
+vim.api.nvim_create_autocmd({'BufWritePre', 'BufWritePost'}, {
+    pattern = "*.c",
+    group = c_group,
+    callback = function ()
+        file = GetCurrentFile()
+        cmd = string.format('silent !clang-format -i %s', file)
+        vim.api.nvim_command(cmd)
+    end
+})
+
 
 function isTerm(path)
     return string.sub(path, string.len(path) - 8 + 1, string.len(path)) == "/usr/bin"

@@ -1,9 +1,9 @@
 font:
   normal:
-    family: CodeNewRoman Nerd Font
+    family: Monaco Nerd Font
     style: Regular
-  size: 14
-  # size: 10
+  # size: 14
+  size: 9
   builtin_box_drawing: true
 
 shell:

@@ -6,12 +6,20 @@ require('sirpi.settings')
 require('sirpi.colors')
 
 require('Comment').setup()
-require('live-server').setup {
-    args = {}
-
-}
 local lsp = require('lsp-zero')
 lsp.extend_lspconfig()
+
+
+
+require('live-server-nvim').setup {
+    custom = {
+        "--port=8080",
+        "--no-css-inject",
+    },
+
+ serverPath = vim.fn.stdpath("data") .. "/live-server/", --default
+ open = "folder", -- folder|cwd     --default
+}
 -- require('lspconfig').gopls.setup {
 --
 --     go = { formatTool = 'goimports', }
@@ -43,8 +51,6 @@ nvim_lsp.gopls.setup {
     }
 }
 --nvim_lsp.typescript.setup {}
-nvim_lsp.biome.setup {}
-nvim_lsp.quick_lint_js.setup {}
 nvim_lsp.jdtls.setup {
     single_file_support = true
 }

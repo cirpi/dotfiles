@@ -48,7 +48,7 @@ map('n', 'ge', ':lua HorizontalReduce()<CR>')
 -- make windows size equal
 map('n', '=', '<C-w>=')
 -- format the current buffer and save
-map('n', '<leader><leader>', ':silent write<CR>')
+map('n', '<leader><leader>', ':silent w<CR>')
 
 
 
