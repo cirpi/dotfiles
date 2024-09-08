@@ -3,7 +3,7 @@ font:
     family: Monaco Nerd Font
     style: Regular
   # size: 14
-  size: 9
+  size: 8.5
   builtin_box_drawing: true
 
 shell:

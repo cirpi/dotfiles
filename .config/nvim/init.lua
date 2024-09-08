@@ -56,6 +56,10 @@ nvim_lsp.jdtls.setup {
 }
 nvim_lsp.lua_ls.setup {}
 nvim_lsp.lemminx.setup {}
+nvim_lsp.hls.setup {
+    filetypes = {"haskell"},
+    single_file_support = true,
+}
 
 
 

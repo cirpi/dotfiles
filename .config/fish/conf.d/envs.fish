@@ -8,6 +8,7 @@ set -xg SCRIPT_PATH /home/sirpi/dotfiles/.config/i3blocks/plugins
 set -xg DOT /home/sirpi/dotfiles/.config/
 set -xg XDG_CONFIG_HOME /home/sirpi/.config
 set -xg NODE_HOME /usr/local/nodejs
-set PATH $GOPATH/bin $NVIM/bin $GOROOT/bin $NODE_HOME/bin $PATH
+set -xg GHC /home/sirpi/.ghcup/
+set PATH $GOPATH/bin $NVIM/bin $GOROOT/bin $NODE_HOME/bin $GHC/bin $PATH
 
 

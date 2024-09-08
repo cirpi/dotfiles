@@ -9,6 +9,7 @@ alias ff "fzf"
 alias st "echo \$status"
 alias inp "sudo apt install $1"
 alias rmp "sudo apt autoremove --purge $1"
+alias show "sudo apt show $1"
 alias dot "dotDir"
 alias src "source $RC/*.fish"
 

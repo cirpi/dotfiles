@@ -7,7 +7,7 @@ local g = vim.g
 vim.g.user_emmet_leader_key = '<C-y>'
 
 local function map(m, k, v)
-    vim.api.nvim_set_keymap(m, k, v, { noremap = true, silent = true })
+vim.api.nvim_set_keymap(m, k, v, { noremap = true, silent = true })
 end
 
 -- Window Navigation
