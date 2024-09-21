@@ -1,17 +1,17 @@
 font:
   normal:
-    family: Monaco Nerd Font
+    family: CommitMono Nerd Font
     style: Regular
-  # size: 14
-  size: 8.5
+  size: 9
   builtin_box_drawing: true
 
 shell:
   program: /usr/bin/fish
 
 window:
-  padding: {x: 10, y: 10}
+  padding: {x: 8, y: 8}
   dynamic_padding: true
+
 
 colors:
   primary:
