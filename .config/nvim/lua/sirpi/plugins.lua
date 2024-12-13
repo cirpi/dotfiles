@@ -32,11 +32,13 @@ return require("packer").startup(function(use)
 	use("AlexvZyl/nordic.nvim")
 	use("loctvl842/monokai-pro.nvim")
 	use("olimorris/onedarkpro.nvim")
+	use("lourenci/github-colors")
 	use({
 		"mcchrish/zenbones.nvim",
 		requires = "rktjmp/lush.nvim",
 	})
 	use("savq/melange")
+	use("slugbyte/lackluster.nvim")
 
 	-- Easy motion
 	-- use 'easymotion/vim-easymotion'

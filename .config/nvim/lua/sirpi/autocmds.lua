@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	callback = function()
 		vim.schedule(function()
 			file = GetCurrentFile()
-			cmd = string.format('silent !ormolu -m "inplace" %s', file)
+			cmd = string.format("silent !fourmolu -i %s", file)
 			vim.api.nvim_command(cmd)
 		end)
 	end,

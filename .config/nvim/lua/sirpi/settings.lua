@@ -3,7 +3,6 @@ local cmd = vim.cmd
 local g = vim.g
 
 o.number = true
-o.background = dark
 o.fillchars:append({ eob = " " })
 o.relativenumber = true
 o.expandtab = true
@@ -21,7 +20,7 @@ o.ignorecase = true
 o.list = true
 o.listchars = "space:\\u2022,tab:\\u21dc\\u2053\\u21dd,eol:\\u2937"
 
-cmd("colorscheme everforest")
+cmd("colorscheme github-colors")
 
 -- make nvim and os clipboard play nicely with each other
 o.clipboard = "unnamedplus"

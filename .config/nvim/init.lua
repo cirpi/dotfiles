@@ -3,12 +3,11 @@ require("sirpi.plugins")
 require("sirpi.autocmds")
 require("sirpi.commands")
 require("sirpi.settings")
-require("sirpi.colors")
+-- require("sirpi.colors")
 
 require("Comment").setup()
 local lsp = require("lsp-zero")
 lsp.extend_lspconfig()
-
 require("live-server-nvim").setup({
 	custom = {
 		"--port=8080",
@@ -91,7 +90,7 @@ end
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = "carbonfox",
 		-- section_separators = { left = '', right = '' },
 		-- component_separators = { left = '', right = '' },
 		-- component_separators = { left = "", right = "" },

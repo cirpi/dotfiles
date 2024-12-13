@@ -9,7 +9,8 @@ set -xg DOT /home/sirpi/dotfiles/.config/
 set -xg XDG_CONFIG_HOME /home/sirpi/.config
 set -xg NODE_HOME /usr/local/nodejs
 set -xg GHC /home/sirpi/.ghcup/
-
+set -xg MANPAGER 'nvim +Man!'
+set NAME "Pop!_OS"
 
 set PATH $GOPATH/bin $NVIM/bin $GOROOT/bin $NODE_HOME/bin $GHC/bin $PATH
 

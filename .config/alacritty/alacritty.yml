@@ -1,6 +1,6 @@
 font:
   normal:
-    family: CommitMono Nerd Font
+    family: Blex Mono Nerd Font
     style: Regular
   size: 9
   builtin_box_drawing: true
@@ -15,8 +15,8 @@ window:
 
 colors:
   primary:
-    background: "#202C25"
-    foreground: "#B9BAAA"
+    background: "#1d2b4e"
+    foreground: "#825d94"
 
 selection:
   save_to_clipboard: true

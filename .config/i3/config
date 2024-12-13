@@ -24,7 +24,7 @@ font pango: Fira Sans 16
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id nitrogen --set-scaled ~/Pictures/Wallpapers/back_forest.jpg
+exec --no-startup-id nitrogen --set-scaled ~/Pictures/Wallpapers/spiderverse.jpg
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -188,10 +188,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #283432
-set $inactive-bg-color   #47564e
-set $text-color          #b9baaa
-set $inactive-text-color #646f68
+set $bg-color 	         #133a74
+set $inactive-bg-color   #24147b
+set $text-color          #cb95cf
+set $inactive-text-color #140102
 set $urgent-bg-color     #E53935
 
 hide_edge_borders both
@@ -231,7 +231,7 @@ gaps inner 14
 # exec_always feh --bg-fill /home/sirpi/Pictures/9459058.jpg
 exec_always xrandr --output HDMI-1 --same-as eDP-1
 bindsym $mod+y exec xrandr --output HDMI-1 --right-of eDP-1
-bindsym $mod+b exec brave-browser --incognito 
+bindsym $mod+Shift+b exec brave-browser --incognito 
 
 
 bindsym $mod+Shift+w move workspace to output next
