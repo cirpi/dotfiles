@@ -20,7 +20,7 @@ o.ignorecase = true
 o.list = true
 o.listchars = "space:\\u2022,tab:\\u21dc\\u2053\\u21dd,eol:\\u2937"
 
-cmd("colorscheme github-colors")
+cmd("colorscheme kanagawa-dragon")
 
 -- make nvim and os clipboard play nicely with each other
 o.clipboard = "unnamedplus"

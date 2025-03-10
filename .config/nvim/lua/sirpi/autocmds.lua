@@ -1,8 +1,8 @@
 local go_augroup = vim.api.nvim_create_augroup("gocommands", { clear = true })
 local c_group = vim.api.nvim_create_augroup("ccommands", { clear = true })
-local web_group = vim.api.nvim_create_augroup("web_commands", { clear = true })
 local haskell_group = vim.api.nvim_create_augroup("haskell_commands", { clear = true })
-local lua_group = vim.api.nvim_create_augroup("lua_commands", { clear = true })
+local lua_augroup = vim.api.nvim_create_augroup("lua_commands", { clear = true })
+local web = vim.api.nvim_create_augroup("js_commands", {clear = true })
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	group = go_augroup,
@@ -16,15 +16,6 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	pattern = { "*.css", "*.svelte", "*.html", "*.js", "*.ts" },
-	group = web_group,
-	callback = function()
-		file = GetCurrentFile()
-		cmd = string.format("silent !prettier -w %s", file)
-		vim.api.nvim_command(cmd)
-	end,
-})
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	pattern = { "*.c", "*.cpp", "*.h", "*.hpp" },
@@ -74,4 +65,16 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 			vim.api.nvim_command(cmd)
 		end)
 	end,
+})
+
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+    group = web,
+    pattern = "javascript, css, html",
+    callback = function ()
+        vim.schedule(function ()
+            file = GetCurrentFile()
+            cmd = {vim.fn.stdpath("data"), "/mason/bin/prettier", file},
+            vim.api.nvim_command(cmd)
+        end)
+    end
 })

@@ -24,7 +24,7 @@ font pango: Fira Sans 16
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id nitrogen --set-scaled ~/Pictures/Wallpapers/spiderverse.jpg
+# exec --no-startup-id nitrogen --set-scaled ~/Pictures/Wallpapers/foggy_forest.jpg
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -169,10 +169,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym j resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 2 px or 2 ppt
+        bindsym k resize grow height 2 px or 2 ppt
+        bindsym j resize shrink height 2 px or 2 ppt
+        bindsym l resize grow width 2 px or 2 ppt
 
         # same bindings, but for the arrow keys
         # bindsym Left resize shrink width 10 px or 10 ppt
@@ -188,10 +188,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #133a74
-set $inactive-bg-color   #24147b
-set $text-color          #cb95cf
-set $inactive-text-color #140102
+set $bg-color 	         #4b4d48
+set $inactive-bg-color   #222220
+set $text-color          #b5b5be
+set $inactive-text-color #8c8c8b
 set $urgent-bg-color     #E53935
 
 hide_edge_borders both
@@ -208,7 +208,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
         position bottom 
         status_command i3status 
-        padding 2px
+        padding 0px
         colors {
             background $bg-color
                 separator #757575
@@ -223,7 +223,7 @@ bar {
 title_align center
 default_border pixel 0
 hide_edge_borders both
-gaps inner 14
+gaps inner 8
 
 
 
@@ -236,7 +236,7 @@ bindsym $mod+Shift+b exec brave-browser --incognito
 
 bindsym $mod+Shift+w move workspace to output next
 bindsym $mod+Shift+c move container to output next
-bindsym $mod+Shift+o exec xrandr --output eDP-1 --auto --primary
+bindsym $mod+Shift+o exec xrandr --output eDP-1 --auto --primary -r 75
 bindsym $mod+Shift+f exec xrandr --output eDP-1 --off
 bindsym $mod+Control+l exec i3lock-fancy -g
 

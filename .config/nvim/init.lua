@@ -23,6 +23,7 @@ require("live-server-nvim").setup({
 -- }
 --
 local nvim_lsp = require("lspconfig")
+nvim_lsp.cssls.setup {}
 nvim_lsp.gopls.setup({
 	on_attach = function(client, bufnr)
 		vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
@@ -45,24 +46,10 @@ nvim_lsp.gopls.setup({
 		},
 	},
 })
---nvim_lsp.typescript.setup {}
-nvim_lsp.jdtls.setup({
-	single_file_support = true,
-})
 nvim_lsp.lua_ls.setup({})
-nvim_lsp.lemminx.setup({})
-nvim_lsp.hls.setup({
-	filetypes = { "haskell" },
-	single_file_support = true,
-})
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-nvim_lsp.cssls.setup({
-	capabilities = capabilities,
-	root_dir = bufdir,
-	single_file_support = true,
-})
 
 --vim.g.go_fmt_commad = 'goimports'
 --vim.g.go_fmt_autosave = true
@@ -90,13 +77,13 @@ end
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "carbonfox",
+		theme = "gruvbox",
 		-- section_separators = { left = '', right = '' },
 		-- component_separators = { left = '', right = '' },
-		-- component_separators = { left = "", right = "" },
-		-- section_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		component_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
+		-- section_separators = { left = "", right = "" },
+		-- component_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
 			winbar = {},
@@ -111,7 +98,7 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = { CurrMode },
+		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff" },
 		--lualine_b = { 'buffers' },
 		lualine_c = { "filetype" },
@@ -125,7 +112,7 @@ require("lualine").setup({
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = { "searchcount" },
-		lualine_z = { "%F" },
+		lualine_z = { "" },
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -153,7 +140,7 @@ require("autoclose").setup({})
 require("mason-lspconfig").setup({
 	-- Replace the language servers listed here
 	-- with the ones you want to install
-	ensure_installed = { "gopls", "lua_ls" },
+	ensure_installed = { "lua_ls" },
 	handlers = {
 		lsp.default_setup,
 	},
