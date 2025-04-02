@@ -10,7 +10,8 @@ set -xg NODE_HOME /usr/local/nodejs
 set -xg GHC /home/sirpi/.ghcup/
 set -xg DOT /home/sirpi/dofiles/
 set -xg SCRIPT_PATH /home/sirpi/scripts
+set -xg CARGO /home/sirpi/.cargo
 set NAME "Pop!_OS"
 
-set PATH $GOPATH/bin $NVIM/bin $GOROOT/bin $NODE_HOME/bin $GHC/bin $SCRIPT_PATH $DOT $PATH
+set PATH $GOPATH/bin $NVIM/bin $GOROOT/bin $NODE_HOME/bin $GHC/bin $SCRIPT_PATH $DOT $CARGO/bin $PATH 
 
