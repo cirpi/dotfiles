@@ -1,8 +1,8 @@
 local o = vim.opt
-local cmd = vim.cmd
 local g = vim.g
 
 o.number = true
+g.mapleader = " "
 o.fillchars:append({ eob = " " })
 o.relativenumber = true
 o.expandtab = true
@@ -20,7 +20,6 @@ o.ignorecase = true
 o.list = true
 o.listchars = "space:\\u2022,tab:\\u21dc\\u2053\\u21dd,eol:\\u2937"
 
-cmd("colorscheme kanagawa-dragon")
 
 -- make nvim and os clipboard play nicely with each other
 o.clipboard = "unnamedplus"
@@ -34,3 +33,6 @@ o.shell = "/usr/bin/fish"
 
 -- Number of screen lines to keep at the top and bottom of the cursor
 o.scrolloff = 10
+
+vim.lsp.util.make_floating_popup_options(100, 50, {});
+return {}

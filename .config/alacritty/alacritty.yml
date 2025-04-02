@@ -1,8 +1,8 @@
 font:
   normal:
-    family: CommitMono Nerd Font
+    family: ComicShannsMono Nerd Font
     style: Regular
-  size: 7.5
+  size: 8.5
 
 shell:
   program: /usr/bin/fish
@@ -10,7 +10,7 @@ shell:
 
 colors:
   primary:
-    background: "#3c3d35"
+    background: "#001212"
     foreground: "#8f9092"
 
 selection:
