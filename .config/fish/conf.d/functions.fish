@@ -5,7 +5,4 @@ function Godoc
     eval $less
 end
 
-function fish_greeting
-    fortune | lolcat
-end
 

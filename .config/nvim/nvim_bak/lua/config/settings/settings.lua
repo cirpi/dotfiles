@@ -23,19 +23,16 @@ o.listchars = "space:\\u2022,tab:\\u21dc\\u2053\\u21dd,eol:\\u2937"
 
 -- make nvim and os clipboard play nicely with each other
 o.clipboard = "unnamedplus"
-o.undodir = "/home/sirpi/vim_undo"
+o.undodir = "/home/iouring/vim_undo"
 o.undofile = true
 
 -- remember 30 items in cmd history
 o.history = 30
 
-o.shell = "/usr/bin/fish"
+o.shell = "/usr/bin/bash"
 
 -- Number of screen lines to keep at the top and bottom of the cursor
 o.scrolloff = 10
 
 vim.lsp.util.make_floating_popup_options(100, 50, {});
-
-
 return {}
-

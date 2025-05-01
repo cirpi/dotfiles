@@ -2,11 +2,11 @@ font:
   normal:
     family: ComicShannsMono Nerd Font
     style: Regular
-  size: 10
+  size: 11
 
-shell:
-  program: /usr/bin/fish
-
+# shell:
+#   program: /usr/bin/fish
+#
 
 # colors:
 #   primary:
@@ -14,13 +14,13 @@ shell:
 #     foreground: "#8f9092"
 colors:
   # Light theme
-  # primary:
-  #   background: "#f2ecbc"
-  #   foreground: "#000000"
-  # Dark theme
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
+    background: "#f2ecbc"
+    foreground: "#000000"
+  # Dark theme
+  # primary:
+  #   background: "#000000"
+  #   foreground: "#ffffff"
 
 selection:
   save_to_clipboard: true
