@@ -1,12 +1,11 @@
 font:
   normal:
-    family: ComicShannsMono Nerd Font
+    family: ComicShanns Mono Nerd Font
     style: Regular
-  size: 10
+  size: 9.3
 
 shell:
   program: /usr/bin/fish
-
 
 # colors:
 #   primary:

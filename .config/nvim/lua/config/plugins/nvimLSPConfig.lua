@@ -15,6 +15,7 @@ return {
 			lsp.rust_analyzer.setup{capabilities = capabilities }
 			lsp.lua_ls.setup{capabilities = capabilities }
             lsp.jsonls.setup{capabilities = capabilities }
+            lsp.eslint.setup{capabilities = capabilities }
 		end,
 	}
 }
