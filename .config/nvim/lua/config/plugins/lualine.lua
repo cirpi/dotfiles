@@ -6,6 +6,9 @@ return {
 			require("lualine").setup {
                 tabline = {
                     lualine_a = {'buffers'},
+                },
+                options = {
+                    theme = 'seoul256'
                 }
             };
 		end

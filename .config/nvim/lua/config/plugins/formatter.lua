@@ -1,14 +1,5 @@
-local prettier = function()
-  return {
-    exe = "prettier",
-    args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
-    stdin = true,
-  }
-end
-
 return {
-
-    "mhartington/formatter.nvim",
+                        "mhartington/formatter.nvim",
     config = function()
         require("formatter").setup {
             filetype = {
@@ -21,6 +12,18 @@ return {
                         }
                     end
                 },
+                haskell = {
+                    function()
+                        return {
+                            exe = "ormolu",
+                            args = {
+                                "--stdin-input-file",
+                                vim.api.nvim_buf_get_name(0),
+                            },
+                            stdin = true,
+                        }
+                    end
+                },
                 rust = {
                     function()
                         return {
@@ -30,15 +33,24 @@ return {
                         }
                      end
                 },
-                yaml = { prettier },
-                javascript = { prettier },
-                typescript = { prettier },
-                html = { prettier },
-                css = { prettier },
-                scss = { prettier },
-                json = { prettier },
-                markdown = { prettier },
-                jsx = { prettier },
+                json = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+                            stdin = true,
+                        }
+                    end
+                },
+                yaml = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+                            stdin = true,
+                        }
+                    end
+                },
                 xml = {
                     function()
                         return {
@@ -46,8 +58,44 @@ return {
                             args = { vim.api.nvim_buf_get_name(0) },
                             stdin = true,
                         }
-                     end
-                }
+                    end
+                },
+                markdown = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+                            stdin = true,
+                        }
+                    end
+                },
+                html = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+                            stdin = true,
+                        }
+                    end
+                },
+                css = {
+                    function()
+                        return {
+                            exe = "prettier",
+                            args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+                            stdin = true,
+                        }
+                    end
+                },
+                python = {
+                    function()
+                        return {
+                            exe = "blue",
+                            args = { vim.api.nvim_buf_get_name(0) },
+                            stdin = false,
+                        }
+                    end
+                },
             }
         }
     end

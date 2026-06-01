@@ -9,13 +9,40 @@ return {
 		config = function()
 			require("mason").setup{}
 			require("mason-lspconfig").setup{}
-            local cap = require("blink.cmp").get_lsp_capabilities()
-			local lsp = require("lspconfig")
-			lsp.gopls.setup{capabilities = capabilities }
-			lsp.rust_analyzer.setup{capabilities = capabilities }
-			lsp.lua_ls.setup{capabilities = capabilities }
-            lsp.jsonls.setup{capabilities = capabilities }
-            lsp.eslint.setup{capabilities = capabilities }
+            local capabilities = require("blink.cmp").get_lsp_capabilities()
+            vim.lsp.config('gopls', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('clangd', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('biome', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('ltex-ls', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('xml', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('eslint', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('hls', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('pyrefly', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('tsgo', {
+                capabilities = capabilities,
+            })
+            vim.lsp.config('pylyzer', {
+                capabilities = capabilities,
+            })
+			-- lsp.rust_analyzer.setup{capabilities = capabilities }
+			-- lsp.lua_ls.setup{capabilities = capabilities }
+			--          lsp.jsonls.setup{capabilities = capabilities }
 		end,
 	}
 }

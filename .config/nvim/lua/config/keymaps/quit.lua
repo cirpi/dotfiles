@@ -1,2 +1,2 @@
-vim.keymap.set('n', '<C-q>', ':q', { silent = true })
+vim.keymap.set('n', '<C-q>', ':q<CR>', { silent = true })
 return {}
